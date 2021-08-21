@@ -1,0 +1,73 @@
+.product-form {
+  width: 45%;
+  height: 550px;
+  background: rgb(212, 212, 212);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 24px;
+    color: #565656;
+    text-transform: uppercase;
+    margin: 20px 0;
+  }
+
+  &__inputs-main-container {
+    width: 80%;
+    height: 70%;
+    background: rgb(236, 236, 236);
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  &__button {
+    width: 40%;
+    height: 8%;
+    margin-top: 20px;
+    border: 2px rgb(163, 105, 29) solid;
+    border-radius: 10px;
+    background: rgb(206, 154, 86);
+    color: rgb(238, 238, 238);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.15);
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__inputs-sub-container {
+    width: 100%;
+    height: 30%;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: space-between;
+  }
+
+  &__lable {
+    margin: 10px 0 0 0;
+    font-size: 16px;
+    color: #565656;
+  }
+
+  &__input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    height: 50%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px #c0c0c0 solid;
+    font-size: 16px;
+    color: #565656;
+  }
+}
