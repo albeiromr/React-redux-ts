@@ -1,5 +1,7 @@
 import React, {useState, useRef} from "react";
+import { useDispatch,} from "react-redux";
 import "./style.scss";
+import addProductAction from "../../redux/actions/addProductAction";
 
 type productType = {
     name: string;
@@ -8,6 +10,8 @@ type productType = {
 }
 
 const ProductForm = () => {
+
+    const dispatch = useDispatch();
 
     const productForm = useRef<HTMLFormElement>(null);
 
@@ -20,6 +24,7 @@ const ProductForm = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         //
+        dispatch(addProductAction(product));
         productForm.current?.reset();
     }
 

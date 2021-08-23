@@ -13,7 +13,7 @@ interface cartReducerStateInterface {
 
 interface action extends redux.Action {
     type: string;
-    payload?: productType
+    payload: productType
 }
 
 const initialState: cartReducerStateInterface = {
@@ -22,6 +22,11 @@ const initialState: cartReducerStateInterface = {
 
 const cartReducer = (state: cartReducerStateInterface = initialState, action: action): cartReducerStateInterface => {
     switch (action.type) {
+        case "add product":
+            return {
+                ...state,
+                cart: [...state.cart, action.payload]
+            }
         default:
             return state;
     }
