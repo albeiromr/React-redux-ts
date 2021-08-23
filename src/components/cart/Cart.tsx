@@ -10,7 +10,11 @@ const Cart = () => {
 
     return(
         <div className="cart">
-            {cart.cart.map(product => <IndividualProduct />)}
+            {cart.cart.map(product => <IndividualProduct 
+            name={product.name}
+            price={Number(product.price)}
+            quantity={Number(product.quantity)}
+            />)}
         </div>
     )
 }
